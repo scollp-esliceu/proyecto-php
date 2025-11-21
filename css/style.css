@@ -1,3 +1,13 @@
+:root {
+    --primario: #3b82f6; /* Azul */
+    --secundario: #06b6d4; /* Cyan */
+    --taronja: #f97316; /* Naranja */
+    --gris: #e5e7eb; /* Gris claro */
+    --oscuro: #000000; /* Gris oscuro */
+    --blanco: #ffffff; /* Blanco */
+}
+
+
 /* -----------------------------
    HACK: BORDER-BOX UNIVERSAL
 ------------------------------ */
@@ -18,42 +28,134 @@ body {
     margin: 0;
     font-family: system-ui, sans-serif;
     background: #f5f5f5;
-    color: #222;
+    color: #000000;
     font-size: 1.6rem; /* 16px reales */
 }
 
-.container {
-    max-width: 960px;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f5f5f5;
+}
+
+:root {
+  --primario: #3b82f6; /* Azul */
+  --secundario: #06b6d4; /* Cyan */
+  --taronja: #f97316; /* Naranja */
+  --gris: #e5e7eb; /* Gris claro */
+  --oscuro: #000000; /* Gris oscuro */
+  --blanco: #ffffff; /* Blanco */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: transparent;
+}
+
+/* Header Styles */
+.menu {
+    position: fixed;           /* ← Esto lo hace fijo */
+    top: 1.5rem;               /* Distancia desde la parte superior */
+    left: 50%;                 
+    transform: translateX(-50%); /* Centrado perfecto */
+    z-index: 1000;             /* Por encima de todo el contenido */
+    
+    width: 20%;
+    max-width: 600px;          /* Evita que sea demasiado ancho en pantallas grandes */
     margin: 0 auto;
-    padding: 0 1.6rem;
+    padding: 0.8rem 1rem;
+    background-color: #111111;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(73, 65, 65, 0.15);
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1rem;                 /* Espacio uniforme entre iconos */
+    
+    backdrop-filter: blur(10px); /* Opcional: efecto cristal muy bonito */
+    -webkit-backdrop-filter: blur(10px);
 }
 
-.site-header {
-    background: #111;
-    color: #fff;
-    padding: 1.6rem 0;
+/* Para que el contenido de la página no quede debajo del menú */
+
+.link {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 70px;
+  height: 50px;
+  border-radius: 8px;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  transform-origin: center left;
+  transition: width 0.2s ease-in;
+  text-decoration: none;
+  color: white;
+  &:before {
+    position: absolute;
+    z-index: -1;
+    content: "";
+    display: block;
+    border-radius: 8px;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    transform: translateX(100%);
+    transition: transform 0.2s ease-in;
+    transform-origin: center right;
+    background-color: #2c2c2c;
+  }
+
+  &:hover,
+  &:focus {
+    outline: 0;
+    width: 130px;
+
+    &:before,
+    .link-title {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
 }
 
-.logo {
-    margin: 0;
-    font-size: 2.4rem;
+.link-icon {
+  width: 28px;
+  height: 28px;
+  display: block;
+  flex-shrink: 0;
+  left: 18px;
+  position: absolute;
+  svg {
+    width: 28px;
+    height: 28px;
+  }
 }
 
-.main-nav a {
-    color: #fff;
-    margin-right: 1.6rem;
-    text-decoration: none;
-    font-size: 1.6rem;
+.link-title {
+  transform: translateX(100%);
+  transition: transform 0.2s ease-in;
+  transform-origin: center right;
+  display: block;
+  text-align: center;
+  text-indent: 28px;
+  width: 100%;
 }
 
-.main-nav a:hover {
-    text-decoration: underline;
-}
 
-.site-content {
-    padding: 2.4rem 0;
-    background: #fff;
-}
 
 /* -----------------------------
    ESTILOS DE LA GALERIA
@@ -81,13 +183,309 @@ body {
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 
-
-
-.site-footer {
-    background: #111;
-    color: #ccc;
+.index-titol {
     text-align: center;
-    padding: 1.2rem 0;
-    font-size: 1.4rem;
+    margin-bottom: 2rem;
 }
 
+.index-titol h1 {
+    font-size: 3.6rem;
+    margin: 0;
+    color: #333;
+}
+
+.index-titol p {
+    font-size: 1.8rem;
+    color: #666;
+}
+
+.contacte {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  height: 100vh;
+  background-image: radial-gradient(rgb(221, 221, 221) 55%, #0000),
+    /* radial-gradient(black 55%, #0000), */
+      linear-gradient(
+        135deg,
+        red,
+        orange,
+        yellow,
+        lime,
+        cyan,
+        blue,
+        indigo,
+        deeppink
+      );
+  background-size: 100% 0.5%, contain;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  25% {
+    background-position: 50% 100%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  75% {
+    background-position: 50% 0%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.login {
+  width: 340px;
+  height: auto;
+  background: #2c2c2c;
+  padding: 47px;
+  padding-bottom: 57px;
+  color: #fff;
+  border-radius: 17px;
+  padding-bottom: 50px;
+  font-size: 1.3em;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.login input[type="text"],
+.login input[type="tel"] {
+  opacity: 1;
+  display: block;
+  border: none;
+  outline: none;
+  width: 100%;
+  padding: 13px 18px;
+  margin: 20px 0 0 0;
+  font-size: 0.8em;
+  border-radius: 100px;
+  background: #3c3c3c;
+  color: #fff;
+}
+
+.login textarea {
+  opacity: 1;
+  display: block;
+  border: none;
+  outline: none;
+  width: 100%;
+  padding: 13px 18px;
+  margin: 20px 0 0 0;
+  font-size: 0.8em;
+  border-radius: 20px;
+  background: #3c3c3c;
+  color: #fff;
+  resize: none;
+  height: 100px;
+}
+
+.login input:focus {
+  animation: bounce 1s;
+  -webkit-appearance: none;
+}
+
+.login input[type=submit],
+.login input[type=button],
+.h1 {
+  border: 0;
+  outline: 0;
+  width: 100%;
+  padding: 13px;
+  margin: 40px 0 0 0;
+  border-radius: 500px;
+  font-weight: 600;
+  animation: bounce2 1.6s;
+}
+
+.h1 {
+  padding: 0;
+  position: relative;
+  top: -20px;
+  display: block;
+  margin-bottom: -0px;
+  font-size: 1.3em;
+}
+
+.btn {
+  background: linear-gradient(144deg, #af40ff, #5b42f3 50%, #00ddeb);
+  color: #fff;
+  padding: 16px !important;
+}
+
+.btn:hover {
+  background: linear-gradient(144deg, #1e1e1e , 20%,#1e1e1e 50%,#1e1e1e );
+  color: rgb(255, 255, 255);
+  padding: 16px !important;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+
+.login input[type=text] {
+  animation: bounce2 1s;
+  -webkit-appearance: none;
+}
+
+.login input[type=email] {
+  animation: bounce2 1s;
+  -webkit-appearance: none;
+}
+
+.login input[type=tel] {
+  animation: bounce2 1s;
+}
+
+.login textarea {
+  animation: bounce2 1s;
+}
+
+.ui {
+  font-weight: bolder;
+  background: -webkit-linear-gradient(#B563FF, #535EFC, #0EC8EE);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  border-bottom: 4px solid transparent;
+  border-image: linear-gradient(0.25turn, #535EFC, #0EC8EE, #0EC8EE);
+  border-image-slice: 1;
+  display: inline;
+}
+
+@media only screen and (max-width: 600px) {
+  .login {
+    width: 70%;
+    padding: 3em;
+  }
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(-250px);
+    opacity: 0;
+  }
+}
+
+@keyframes bounce1 {
+  0% {
+    opacity: 0;
+  }
+
+  40% {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+}
+
+@keyframes bounce2 {
+  0% {
+    opacity: 0;
+  }
+
+  70% {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+}
+
+
+
+/* -----------------------------
+   ESTILOS DEL FOOTER
+------------------------------ */
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #111;
+  color: #ccc;
+  font-size: 1.4rem;
+  display: flex;
+  align-items: center;
+}
+
+ul {
+  list-style: none;
+}
+
+.example-1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bolder; /* Made bolder */
+  background-color: #000; /* Black background */
+  border-radius: 30px; /* Added border-radius to make the container rounded */
+  padding: 20px; /* Added padding for better appearance */
+  height: 70px;
+  width: 300px;
+}
+
+.example-1 .icon-content {
+  margin: 0 10px;
+  position: relative;
+  font-weight: bolder; /* Made bolder */
+}
+
+.example-1 .icon-content .tooltip {
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #fff; /* White background */
+  color: #2c2c2c; /* Black text */
+  padding: 6px 10px;
+  border-radius: 5px;
+  opacity: 0;
+  visibility: hidden;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  font-weight: bolder; /* Made bolder */
+}
+
+.example-1 .icon-content:hover .tooltip {
+  opacity: 1;
+  visibility: visible;
+  top: -50px;
+}
+
+.example-1 .icon-content .link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  color: #fff; /* White icons */
+  background-color: #000; /* Black background */
+  transition: all 0.3s ease-in-out;
+  font-weight: bolder; /* Made bolder */
+}
+
+.example-1 .icon-content .link:hover {
+  box-shadow: 3px 2px 45px 0px rgb(0 0 0 / 12%);
+}
+
+.example-1 .icon-content .link svg {
+  width: 30px;
+  height: 30px;
+  fill: #fff; /* White icons */
+}
+
+.example-1 .icon-content .link[data-social="spotify"]:hover {
+  color: #00a2ff;
+}
+
+.example-1 .icon-content .link[data-social="pinterest"]:hover {
+  color: #ff009d;
+}
+
+.example-1 .icon-content .link[data-social="dribbble"]:hover {
+  color: #686868;
+}
+
+.example-1 .icon-content .link[data-social="telegram"]:hover {
+  color: #23b100;
+}
