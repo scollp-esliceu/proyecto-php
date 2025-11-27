@@ -6,7 +6,7 @@ $password   = "alumno123";  // Contraseña configurada en docker-compose
 $dbName     = "alumnos";         // Base de datos configurada en docker-compose
 
 // Crear la conexión con MySQL/MariaDB usando mysqli
-$conn = new mysqli($serverName, $username, $password, $dbName);
+$conn=new mysqli($serverName,$username,$password,$dbName);
 
 // Comprobar si hay errores en la conexión
 if ($conn->connect_error) {

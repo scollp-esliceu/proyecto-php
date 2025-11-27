@@ -1,18 +1,37 @@
 body {
     margin-top: 10rem;
-    background: linear-gradient(180deg, 
-        #5a5a5a 0%, 
-        #3a3a3a 20%, 
-        #2a2a2a 40%, 
-        #1a1a1a 70%, 
-        #0f0f0f 100%
-    );
+    background: #7CAEC2;
+  background: linear-gradient(90deg, rgba(124, 174, 194, 1) 0%, rgba(255, 255, 255, 1) 50%, rgba(124, 174, 194, 1) 100%);
+  }
 
+.hero {
+    height: 75rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
 }
 
-.index-titol {
-    height: 100vh;
-    text-align: center;
+.hero-container h1 {
+    font-size: 10rem;
+    color: #111111;
+    margin-top: 10rem;
+    margin-bottom: 3rem;
+}
+
+.hero-container p {
+    font-size: 2rem;
+    color: #111111;
+}
+
+.plans-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 5rem;
+    margin-bottom: 10rem;
+    gap: 5rem;
+    background-color: rgba(17, 24, 39, 0.5);
+    border-radius: 2rem;
 }
 
 .card {
@@ -21,7 +40,6 @@ body {
   display: flex;
   flex-wrap: wrap;
   align-items: stretch;
-  margin-bottom: 2rem;
   width: 320px;
   display: flex;
   flex-direction: column;
@@ -83,7 +101,7 @@ body {
   outline: none;
   display: inline-block;
   border-radius: 2rem;
-  background-color: rgba(167, 139, 250, 1);
+  background-color: rgba(124, 174, 194, 1);
   padding-left: 1.25rem;
   padding-right: 1.25rem;
   padding-top: 0.75rem;
@@ -95,7 +113,7 @@ body {
 }
 
 .action:hover {
-  background-color: rgba(139, 92, 246, 1);
+  background-color: rgb(96, 123, 134);
 }
 
 /* From Uiverse.io by csemszepp */ 
@@ -116,46 +134,12 @@ body {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  --s: 100px; /* control the size */
-  --c1: #f8b195;
-  --c2: #355c7d;
-
-  --_g: var(--c2) 4% 14%, var(--c1) 14% 24%, var(--c2) 22% 34%,
-    var(--c1) 34% 44%, var(--c2) 44% 56%, var(--c1) 56% 66%, var(--c2) 66% 76%,
-    var(--c1) 76% 86%, var(--c2) 86% 96%;
-  background: radial-gradient(
-      100% 100% at 100% 0,
-      var(--c1) 4%,
-      var(--_g),
-      #0008 96%,
-      #0000
-    ),
-    radial-gradient(
-        100% 100% at 0 100%,
-        #0000,
-        #0008 4%,
-        var(--_g),
-        var(--c1) 96%
-      )
-      var(--c1);
-  background-size: var(--s) var(--s);
+  background: #7CAEC2;
+  background: linear-gradient(90deg, rgba(124, 174, 194, 1) 0%, rgba(255, 255, 255, 1) 50%, rgba(124, 174, 194, 1) 100%);
 }
 
 img {
   width: 100rem;
   height: 100rem;
 
-}
-
-.fade-in {
-  opacity: 0;                  /* Empieza invisible */
-  transform: translateY(30px); /* Opcional: baja un poco */
-  animation: aparecer 1.2s ease-out forwards;
-}
-
-@keyframes aparecer {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }
