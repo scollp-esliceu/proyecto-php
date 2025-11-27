@@ -17,7 +17,7 @@ require __DIR__ . "/includes/header.php";
         <div class="card">
         <div class="header">
                                 <span class="title">Principiant</span>
-                                <span class="price">9,99 € / mes</span>
+                                <span class="price">9.99 € / mes</span>
                             </div>
                             <p class="desc">Etiam ac convallis enim, eget euismod dolor.</p>
                             <ul class="lists">
