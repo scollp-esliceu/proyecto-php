@@ -4,7 +4,7 @@
 <ul class="example-1">
   <li class="icon-content">
     <a
-      href="https://www.spotify.com/"
+      href="https://www.facebook.com/"
       aria-label="Spotify"
       data-social="spotify"
       class="link"
@@ -20,7 +20,7 @@
   </li>
   <li class="icon-content">
     <a
-      href="https://www.pinterest.com/"
+      href="https://www.instagram.com/"
       aria-label="Pinterest"
       data-social="pinterest"
       class="link"
@@ -36,7 +36,7 @@
   </li>
   <li class="icon-content">
     <a
-      href="https://dribbble.com/"
+      href="https://x.com/"
       aria-label="Dribbble"
       data-social="dribbble"
       class="link"
@@ -52,7 +52,7 @@
   </li>
   <li class="icon-content">
     <a
-      href="https://telegram.org/"
+      href="https://gmail.com/"
       aria-label="Telegram"
       data-social="telegram"
       class="link"
