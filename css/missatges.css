@@ -1,0 +1,63 @@
+.read-titol {
+    margin-top: 15rem;
+    justify-content: center;
+    text-align: center;
+}
+
+.read-titol h2 {
+    font-size: 10rem;
+}
+
+.read-titol p {
+    font-size: 3rem;
+}
+
+.Missatges-container {
+    margin-top: 10rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10rem;
+}
+
+.fila {
+    width: 25%;
+    padding: 1.5rem;
+    background-color: rgb(82, 207, 216);
+    border-radius: 2rem;
+}
+
+.fila .camp {
+    margin-bottom: 1.8rem;
+}
+
+.fila .camp:last-child {
+    margin-bottom: 0;
+}
+
+.fila .etiqueta {
+    display: inline-block;
+    width: 110px;
+    font-weight: 600;
+    color: #fff;
+    opacity: 0.9;
+}
+
+.fila .id .etiqueta {
+    width: auto;
+    margin-right: 1rem;
+}
+
+.id {
+    text-align: center;
+}
+
+.fila .missatge p {
+    margin: 1rem 0 0 0;
+    line-height: 1.6;
+    background: rgba(255,255,255,0.15);
+    padding: 1.5rem;
+    border-radius: 1rem;
+}
