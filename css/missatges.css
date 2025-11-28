@@ -1,63 +1,107 @@
+a {
+    text-decoration: none;
+}
+
 .read-titol {
-    margin-top: 15rem;
-    justify-content: center;
+    margin-top: 8rem;
     text-align: center;
 }
 
 .read-titol h2 {
-    font-size: 10rem;
+    font-size: 5rem;
+    margin-bottom: 1rem;
 }
 
 .read-titol p {
-    font-size: 3rem;
-}
-
-.Missatges-container {
-    margin-top: 10rem;
-    display: flex;
-    flex-direction: column;
-    gap: 3rem;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 10rem;
-}
-
-.fila {
-    width: 25%;
-    padding: 1.5rem;
-    background-color: rgb(82, 207, 216);
-    border-radius: 2rem;
-}
-
-.fila .camp {
-    margin-bottom: 1.8rem;
-}
-
-.fila .camp:last-child {
-    margin-bottom: 0;
-}
-
-.fila .etiqueta {
-    display: inline-block;
-    width: 110px;
-    font-weight: 600;
-    color: #fff;
+    font-size: 2rem;
     opacity: 0.9;
 }
 
-.fila .id .etiqueta {
-    width: auto;
-    margin-right: 1rem;
-}
-
-.id {
+.alert.success {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1rem;
+    background: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+    border-radius: 1rem;
     text-align: center;
 }
 
-.fila .missatge p {
-    margin: 1rem 0 0 0;
-    line-height: 1.6;
-    background: rgba(255,255,255,0.15);
-    padding: 1.5rem;
+.Missatges-container {
+    margin: 4rem auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    align-items: center;
+    padding: 0 1rem;
+}
+
+.fila {
+    width: 100%;
+    max-width: 800px;
+    background: rgb(82, 207, 216);
+    padding: 2rem;
+    border-radius: 2rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    color: white;
+}
+
+.fila-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid rgba(255,255,255,0.3);
+}
+
+.id-number {
+    font-size: 1.8rem;
+    font-weight: bold;
+    background: rgba(255,255,255,0.2);
+    padding: 0.5rem 1rem;
     border-radius: 1rem;
+}
+
+.btn-borrar a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    background: rgba(255,0,0,0.3);
+    color: white;
+    font-weight: bold;
+    font-size: 1.5rem;
+    border-radius: 50%;
+    transition: all 0.3s;
+}
+
+.btn-borrar a:hover {
+    background: red;
+    transform: scale(1.15);
+}
+
+.fila .camp {
+    margin-bottom: 1.2rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.fila .etiqueta {
+    font-weight: 600;
+    opacity: 0.95;
+    min-width: 110px;
+}
+
+.fila .missatge p {
+    background: rgba(255,255,255,0.15);
+    padding: 1.2rem;
+    border-radius: 1rem;
+    margin: 0.5rem 0 0;
+    line-height: 1.6;
+    flex: 1;
 }

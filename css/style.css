@@ -61,6 +61,7 @@ body {
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background-color: transparent;
+  min-width: 100vh;
 }
 
 /* Header Styles */
@@ -416,6 +417,7 @@ footer {
   font-size: 1.4rem;
   display: flex;
   align-items: center;
+  flex-shrink: 0;
 }
 
 ul {

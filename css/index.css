@@ -1,7 +1,7 @@
 body {
     margin-top: 10rem;
     background: #7CAEC2;
-  background: linear-gradient(90deg, rgba(124, 174, 194, 1) 0%, rgba(255, 255, 255, 1) 50%, rgba(124, 174, 194, 1) 100%);
+    background: linear-gradient(90deg, rgba(124, 174, 194, 1) 0%, rgba(255, 255, 255, 1) 50%, rgba(124, 174, 194, 1) 100%);
   }
 
 .hero {

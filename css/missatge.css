@@ -1,4 +1,7 @@
-/* MISSATGE D'ÈXIT O ERROR (el que surt damunt del formulari) */
+body {
+    min-width: 100vh;
+}
+
 .missatge-alert {
     width: 100%;
     display: flex;
@@ -8,8 +11,8 @@
 }
 
 .missatge-alert > div {
-    width: 40%;                    /* Tu tenies 20%, però amb 40% queda millor en mòbils */
-    min-width: 300px;              /* Evita que sigui massa estret en pantalles petites */
+    width: 40%;                    
+    min-width: 300px;            
     max-width: 600px;
     background-color: rgba(85, 229, 240, 0.6);
     border-radius: 1rem;
@@ -20,25 +23,15 @@
 
 .missatge-alert p {
     margin: 0;
-    font-size: 2.2rem;             /* Una mica més petit que 2.5rem perquè càpiga bé */
+    font-size: 2.2rem;            
     font-weight: 600;
     color: #000;
 }
-
-/* ÈXIT → verd suau */
 .missatge-success > div {
-    background-color: rgba(144, 238, 144, 0.75);  /* verd clar */
+    background-color: rgba(144, 238, 144, 0.75);  
     border: 2px solid #28a745;
 }
 
-/* ERROR → vermell suau */
-.missatge-error > div {
-    background-color: rgba(255, 182, 193, 0.8);   /* rosa/vermell clar */
-    border: 2px solid #dc3545;
-    color: #721c24;
-}
-
-/* Animació d'aparició suau */
 @keyframes apareix {
     from {
         opacity: 0;
@@ -50,11 +43,15 @@
     }
 }
 
-/* Responsiu per mòbils */
 @media (max-width: 640px) {
     .missatge-alert > div {
         width: 90%;
         font-size: 1.8rem;
         padding: 1rem 0;
     }
+}
+
+.missatge-container {
+    flex: 1 0 auto;
+    padding: 2rem 1rem;
 }
